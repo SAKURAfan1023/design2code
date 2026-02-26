@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 const tabs = [
   { id: "manufacturing", label: "生产制造" },
@@ -204,7 +205,7 @@ export default function IndustryHighlightsSection() {
           {/* Image */}
           <div className="relative w-[480px] h-[320px] rounded-xl overflow-hidden flex-shrink-0">
             <Image
-              src={content.image}
+              src={getAssetPath(content.image)}
               alt={content.title}
               fill
               className="object-contain"

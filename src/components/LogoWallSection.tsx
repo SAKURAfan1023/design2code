@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 const logos = [
   { src: "/assets/logo-1.webp", alt: "Logo 1" },
@@ -44,7 +45,7 @@ export default function LogoWallSection() {
             className="w-36 h-16 relative flex items-center justify-center"
           >
             <Image
-              src={logo.src}
+              src={getAssetPath(logo.src)}
               alt={logo.alt}
               fill
               className="object-contain"

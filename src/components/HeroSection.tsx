@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 const ctaButtons = [
   { text: "在线使用", isMain: true },
@@ -100,7 +101,7 @@ export default function HeroSection() {
         className="relative w-[800px] h-[648px] rounded-xl overflow-hidden"
       >
         <Image
-          src="/assets/banner.webp"
+          src={getAssetPath("/assets/banner.webp")}
           alt="TextIn xParse Banner"
           fill
           className="object-contain"

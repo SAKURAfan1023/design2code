@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 interface FeatureCardProps {
   tag: string;
@@ -103,7 +104,7 @@ function FeatureCard({
   const image = (
     <div className="relative w-[544px] h-[320px] rounded-xl overflow-hidden flex-shrink-0">
       <Image
-        src={imageSrc}
+        src={getAssetPath(imageSrc)}
         alt={imageAlt}
         fill
         className="object-contain"

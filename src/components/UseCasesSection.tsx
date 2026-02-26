@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 interface UseCaseCardProps {
   number: string;
@@ -29,7 +30,7 @@ function UseCaseCard({ number, title, description, tags, imageSrc, imageAlt, ind
       {/* Image */}
       <div className="relative w-[617px] h-[220px] rounded-xl overflow-hidden flex-shrink-0">
         <Image
-          src={imageSrc}
+          src={getAssetPath(imageSrc)}
           alt={imageAlt}
           fill
           className="object-cover"
